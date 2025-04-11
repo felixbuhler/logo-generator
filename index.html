@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Logo Generator</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- p5.js (local) -->
+     
+    <script src="p5.min.js"></script>
+
+    <script src="https://unpkg.com/p5.js-svg@1.6.0"></script>
+
+    <!-- load via CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="settings">
+      <h1>Logo<br>Generator</h1>
+
+      <div class="settings-set">
+        <h2>Brand</h2>
+        <!-- Brand -->
+        <label for="brand">Name</label>
+        <input style="resize: none" type="text" id="brand" value="Code"></input>
+         <!-- Brand -->
+         <label for="mini">Mini</label>
+         <input style="resize: none" type="text" id="mini" value="TM"></input>
+        <!-- Brand -->
+        <label for="color">Color</label>
+        <input style="resize: none" type="color" id="color" value="#00ff00"></input>
+      </div>
+      <div class="settings-set">
+        <h2>Logo</h2>
+        <!-- Diameter -->
+        <label for="diameter">Seed</label>
+         <input type="range" min="25" max="40" id="diameter" value="40">
+      </div>
+      <div class="settings-set">
+        <h2>Export</h2>
+        <button id="export-image-button" onclick="exportImage()">Export SVG</button>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
